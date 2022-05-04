@@ -5,8 +5,9 @@ using System.Threading.Tasks;
 
 namespace TestApplication.Models
 {
-    public class FileLocation
+    public class FileLocationOptions
     {
+        public const string FileLocation = "FileLocation";
         public string FilePath { get; set; }
     }
 }

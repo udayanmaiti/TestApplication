@@ -39,6 +39,11 @@ namespace TestApplication.Controllers
                 throw new System.ArgumentNullException(nameof(person));
             }
 
+            if (!ModelState.IsValid)
+            {
+                return View(person);
+            }
+
             _logger.LogInformation($"AddPerson method :{JsonConvert.SerializeObject(person)}");
             _personService.AddPerson(person);
             return RedirectToAction("Index");

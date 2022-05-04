@@ -12,7 +12,7 @@ namespace TestApplication.Services.Helpers
         private string _fileLocation;
         private readonly object _lockObject = new object();
 
-        public FileHelper(IOptions<FileLocation> options)
+        public FileHelper(IOptions<FileLocationOptions> options)
         {
             if (options is null)
             {
